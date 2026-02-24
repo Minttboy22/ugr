@@ -879,6 +879,18 @@ border: 2px solid #bbbbbb !important;
 
 /* --- ESTILO DE LOS BOTONES Y LINKS --- */
 
+.btn-group .dropdown-menu .dropdown-item {
+color: #005eb8 !important;
+background-color: white !important;
+transition: 0s !important;
+}
+
+.btn-group .dropdown-menu .dropdown-item:hover {
+color: white !important;
+background-color: #005eb8 !important;
+transition: 0s !important;
+}
+
 #adaptable-page-header-wrapper .above-header .nav-link i {
 transition: 0.5s;
 }
