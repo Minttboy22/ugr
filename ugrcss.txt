@@ -1,7 +1,86 @@
 /* --- ETIQUETAS SNIPPET --- */
-
+/*lo dejo desactivado mientras averiguo como cambiar los colores a elección*/
 .tiny_snippet_widget_buttons .btn.btn-info {
 background: #005eb8;
+}
+
+.tiny_snippet_widget_buttons:is(:nth-child(4), :nth-child(10), :nth-child(11), :nth-child(12)) .btn-info {
+  background: #003D75;
+}
+
+.tiny_snippet_widget_buttons:is(:nth-child(4), :nth-child(10), :nth-child(11), :nth-child(12)) .btn-info:hover {
+  background: #002547 !important;
+}
+
+/*--orden de snippets--*/
+
+.tiny_snippet_widgets_optionspanel .tiny_snippet_form .tab-content {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.tiny_snippet_form .tab-content {
+    display: grid !important;
+    grid-template-areas: "head head head"
+                         "tit_rojo tarj_roja doc_simp"
+                         "tit_azul tarj_azul doc_doble"
+                         "etiq_roja tarj_dob asist"
+                         "etiq_azul linea ."
+                         "cit_autor . ."
+                         "text_int . ."; !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+}
+
+@media(max-width: 1000px) {
+   .tiny_snippet_form .tab-content {
+        grid-template-areas:
+                         "head"
+                         "tit_rojo"
+                         "tit_azul"
+                         "etiq_roja"
+                         "etiq_azul"
+                         "cit_autor"
+                         "text_int"
+                         "linea"
+                         "tarj_roja"
+                         "tarj_azul"
+                         "tarj_dob"
+                         "doc_simp"
+                         "doc_doble"
+                         "asist" !important;
+    grid-template-columns: 1fr  !important;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px  !important;
+    }
+}
+
+.tiny_snippet_form .tab-content div {
+    width: auto !important;
+    padding: 8px !important;
+    margin: 1px !important;
+    border-radius: 4px !important;
+}
+
+.tiny_snippet_form .tab-content :nth-child(1) {grid-area: head; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(2) {grid-area: tit_rojo; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(3) {grid-area: tit_azul; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(4) {grid-area: linea; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(5) {grid-area: etiq_roja; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(6) {grid-area: etiq_azul; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(7) {grid-area: cit_autor; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(8) {grid-area: text_int; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(9) {grid-area: asist; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(10) {grid-area: tarj_azul; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(11) {grid-area: tarj_roja; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(12) {grid-area: tarj_dob; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(13) {grid-area: doc_simp; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(14) {grid-area: doc_doble; align-content: center;}
+
+.tiny_snippet_widget_buttons .btn.btn-info:hover {
+    background-color: #004b92;
+}
+
+.tab-content .tiny_snippet_form_row .tiny_snippet_templatevariable_14 {
+    width: 12rem;
 }
 
 .recurso{
@@ -854,6 +933,11 @@ font-size: inherit;
 box-shadow: none;
 }
 
+.d-flex .mb-3 .form-control {
+    border-radius: 8px;
+    border: 1px solid #8f959e;
+}
+
 .custom-select {
     border: 1px solid #CED4DA;
     border-radius: 8px;
@@ -878,6 +962,26 @@ border: 2px solid #bbbbbb !important;
 }
 
 /* --- ESTILO DE LOS BOTONES Y LINKS --- */
+
+#mod-zoom-meeting-rooms-list .mb-2 {
+    display: flex;
+}
+
+#mod-zoom-meeting-rooms-list .mb-2 .btn {
+    padding: 0;
+    font-size: 1rem;
+    display: flex;
+    margin-left: 8px;
+}
+
+#mod-zoom-meeting-rooms-list .mb-2 .btn:hover {
+    color: white;
+    background-color: #004b92;
+}
+
+#mod-zoom-meeting-rooms-list .mb-2 span {
+    margin: 6px;
+}
 
 .btn-group .dropdown-menu .dropdown-item {
 color: #005eb8 !important;
@@ -3446,7 +3550,7 @@ grid-template-columns: repeat(1, 1fr) !important;
 
 .header_sem h3, .header_sem2 h3 {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
 }
 
 .header_sem h1 {
@@ -3454,7 +3558,7 @@ grid-template-columns: repeat(1, 1fr) !important;
     padding: 8px 12px;
     border-radius: 30px;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .header_sem2 {
@@ -3503,3 +3607,38 @@ grid-template-columns: repeat(1, 1fr) !important;
 .header_sem2 h1:first-child {
     margin-top: 0.5rem;
 }
+
+/*--Botón de mostrar contraseña--*/
+
+/*.form-password-toggle .btn-password-toggle {
+    display: inline-block !important;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    z-index: 2;
+    background: #005eb8;
+    border: none;
+    padding: 4px 0px;
+    width: 3rem;
+    z-index: 1000;
+    align-items: center;
+}
+
+.form-password-toggle .btn-password-toggle:active {
+    background-color: #004b92;
+}
+
+.btn-password-toggle .fas, .far, .fab, .fa {
+margin: 0 !important;
+}
+
+.login-container .input-group-append .btn {
+    display: block !important;
+    z-index: 10;
+}*/
+
+/*.form-password-toggle {
+    display: flex !important;
+    position: relative;
+    align-items: center;
+}*/
