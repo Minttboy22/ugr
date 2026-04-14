@@ -12,6 +12,10 @@ background: #005eb8;
   background: #002547 !important;
 }
 
+/*.modal-content .modal-footer .btn {
+    display: none;
+}*/
+
 /*--orden de snippets--*/
 
 .tiny_snippet_widgets_optionspanel .tiny_snippet_form .tab-content {
@@ -24,8 +28,8 @@ background: #005eb8;
     grid-template-areas: "head head head"
                          "tit_rojo tarj_roja doc_simp"
                          "tit_azul tarj_azul doc_doble"
-                         "etiq_roja tarj_dob asist"
-                         "etiq_azul linea ."
+                         "etiq_roja tarj_dob doc_triple"
+                         "etiq_azul linea asist"
                          "cit_autor . ."
                          "text_int . ."; !important;
     grid-template-columns: 1fr 1fr 1fr !important;
@@ -47,6 +51,7 @@ background: #005eb8;
                          "tarj_dob"
                          "doc_simp"
                          "doc_doble"
+                         "doc_triple"
                          "asist" !important;
     grid-template-columns: 1fr  !important;
     grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px  !important;
@@ -74,6 +79,7 @@ background: #005eb8;
 .tiny_snippet_form .tab-content :nth-child(12) {grid-area: tarj_dob; align-content: center;}
 .tiny_snippet_form .tab-content :nth-child(13) {grid-area: doc_simp; align-content: center;}
 .tiny_snippet_form .tab-content :nth-child(14) {grid-area: doc_doble; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(15) {grid-area: doc_triple; align-content: center;}
 
 .tiny_snippet_widget_buttons .btn.btn-info:hover {
     background-color: #004b92;
@@ -284,6 +290,20 @@ margin: 0;
 
 .carousel-indicators {
 margin-bottom: 0.25rem;
+}
+
+/* Elimina el efecto de "quedarse marcado" después del click */
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  outline: none;
+  box-shadow: none;
+  opacity: 0.5; /* O el valor que prefieras para el estado normal */
+}
+
+/* Mantiene el efecto visual solo cuando el mouse está realmente encima */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 0.9;
 }
 
 #frontblockregion .my-1.col-md-12{
@@ -927,10 +947,12 @@ border-top -left-radius: 8px;
 border-bottom -left-radius: 8px;
 border: 1px solid #bbb; /*#CED4DA*/
 font-size: inherit;
+border-radius: 8px;
 }
 
 .form-control:focus {
 box-shadow: none;
+border-radius: 8px;
 }
 
 .d-flex .mb-3 .form-control {
@@ -962,6 +984,14 @@ border: 2px solid #bbbbbb !important;
 }
 
 /* --- ESTILO DE LOS BOTONES Y LINKS --- */
+
+.paging .btn { 
+    transition: 0s !important;
+}
+
+.generaltable .lastrow .cell .btn {
+    padding: 4px !important;
+}
 
 #mod-zoom-meeting-rooms-list .mb-2 {
     display: flex;
@@ -996,12 +1026,12 @@ transition: 0s !important;
 }
 
 #adaptable-page-header-wrapper .above-header .nav-link i {
-transition: 0.5s;
+/*transition: 0.5s;*/
 }
 
 #adaptable-page-header-wrapper .above-header .nav-link:hover i {
 color: #004B92 !important;
-transition: 0.5s;
+/*transition: 0.5s;*/
 }
 
 .btn {
@@ -1016,12 +1046,12 @@ color: #fff!important;
 .btn.btn-danger {
 background-color: #ED3340!important;
 color: #fff!important;
-transition: 0.5s;
+/*transition: 0.5s;*/
 }
 
 .btn.btn-danger:hover {
 background: #9b0f19 !important;
-transition: 0.5s;
+/*transition: 0.5s;*/
 }
 
 .btn, .btn a {
@@ -2458,7 +2488,7 @@ align-items: center;
 
 .modal-header .close {
 padding: 2px 12px;
-font-size: 1rem;
+font-size: 1.5rem;
 border-radius: 25px;
 }
 
@@ -2675,7 +2705,7 @@ border-radius: 10px 10px 0 0;
 }
 
 .format-tiles .course-content ul.tiles .tile-clickable {
-transition: 0.3s;
+/*transition: 0.3s;*/
 }
 
 .format-tiles .course-content ul.tiles .tile-clickable:hover {
@@ -2900,7 +2930,7 @@ border-right: var(--bs-nav-tabs-border-width) solid #005eb85c;
 
 .onetopic-tabs .nav-link:hover {
     border-color: #808080 !important;
-    transition: border-color 0.3s ease;
+    /*transition: border-color 0.3s ease;*/
 }
 
 .paging.paging-morelink {
@@ -2971,7 +3001,7 @@ background-color: #a6cbff;
 }
 
 .local-accessibility-panel .card-body .container .row .btn {
-transition: 0.15s;
+/*transition: 0.15s;*/
 background-color: #a6cbff;
 margin-bottom: 0.5rem;
 }
@@ -3642,3 +3672,70 @@ margin: 0 !important;
     position: relative;
     align-items: center;
 }*/
+
+/*formularios de recuperación de contraseña*/
+
+/*.fcontainer .mb-3 .col-md-9 .form-control*/
+#id_changepasswordcontainer #id_password.form-control,
+#id_newpassword1.form-control,
+#id_newpassword2.form-control {
+    width: 30%;
+    border-radius: 8px;
+}
+
+@media(max-width: 768px) {
+    #id_changepasswordcontainer #id_password.form-control,
+    #id_newpassword1.form-control,
+    #id_newpassword2.form-control {
+         width: 70%
+    }
+}
+
+#id_password ~ span,
+#id_newpassword1 ~ span,
+#id_newpassword2~ span {
+    position: relative !important;
+    right: 2rem !important;
+}
+
+#id_setpasswordcontainer #id_password ~ span {
+    position: absolute !important;
+    right: 10px !important;
+}
+
+#id_password2 {
+    position: 0;
+}
+
+#id_newpassword ~ span {
+    display: none;
+}
+
+.video_frame_container:hover .marco_video {
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.marco_video {
+  opacity: 1;
+  transition: 0.3s;
+  pointer-events: auto;
+}
+
+@media(max-width: 768px) {
+.carousel-indicators {
+    display: none;
+}
+}
+
+.modal-content .modal-footer button[data-action="cancel"] {
+    display: none;
+}
+
+/*overflow para el menu de perfil dropdown*/
+
+#adaptable-page-header-wrapper .navbar .dropdown-menu {
+    max-height: 400px;
+    overflow-y: auto;
+}
