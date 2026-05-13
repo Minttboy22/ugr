@@ -1,14 +1,13 @@
 /* --- ETIQUETAS SNIPPET --- */
-/*lo dejo desactivado mientras averiguo como cambiar los colores a elección*/
 .tiny_snippet_widget_buttons .btn.btn-info {
 background: #005eb8;
 }
 
-.tiny_snippet_widget_buttons:is(:nth-child(4), :nth-child(10), :nth-child(11), :nth-child(12)) .btn-info {
+.tiny_snippet_widget_buttons:is(:nth-child(4), :nth-child(7), :nth-child(8), :nth-child(11), :nth-child(12), :nth-child(13)) .btn-info {
   background: #003D75;
 }
 
-.tiny_snippet_widget_buttons:is(:nth-child(4), :nth-child(10), :nth-child(11), :nth-child(12)) .btn-info:hover {
+.tiny_snippet_widget_buttons:is(:nth-child(4), :nth-child(7), :nth-child(8), :nth-child(11), :nth-child(12), :nth-child(13)) .btn-info:hover {
   background: #002547 !important;
 }
 
@@ -28,10 +27,10 @@ background: #005eb8;
     grid-template-areas: "head head head"
                          "tit_rojo tarj_roja doc_simp"
                          "tit_azul tarj_azul doc_doble"
-                         "etiq_roja tarj_dob doc_triple"
-                         "etiq_azul linea asist"
-                         "cit_autor . ."
-                         "text_int . ."; !important;
+                         "subt_rojo tarj_dob doc_triple"
+                         "subt_azul linea ."
+                         "etiq_roja cit_autor ."
+                         "etiq_azul text_int ."; !important;
     grid-template-columns: 1fr 1fr 1fr !important;
 }
 
@@ -41,18 +40,19 @@ background: #005eb8;
                          "head"
                          "tit_rojo"
                          "tit_azul"
+                         "subt_rojo"
+                         "subt_azul"
                          "etiq_roja"
                          "etiq_azul"
-                         "cit_autor"
-                         "text_int"
-                         "linea"
                          "tarj_roja"
                          "tarj_azul"
                          "tarj_dob"
+                         "linea"
+                         "cit_autor"
+                         "text_int"
                          "doc_simp"
                          "doc_doble"
-                         "doc_triple"
-                         "asist" !important;
+                         "doc_triple" !important;
     grid-template-columns: 1fr  !important;
     grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px  !important;
     }
@@ -73,13 +73,14 @@ background: #005eb8;
 .tiny_snippet_form .tab-content :nth-child(6) {grid-area: etiq_azul; align-content: center;}
 .tiny_snippet_form .tab-content :nth-child(7) {grid-area: cit_autor; align-content: center;}
 .tiny_snippet_form .tab-content :nth-child(8) {grid-area: text_int; align-content: center;}
-.tiny_snippet_form .tab-content :nth-child(9) {grid-area: asist; align-content: center;}
-.tiny_snippet_form .tab-content :nth-child(10) {grid-area: tarj_azul; align-content: center;}
-.tiny_snippet_form .tab-content :nth-child(11) {grid-area: tarj_roja; align-content: center;}
-.tiny_snippet_form .tab-content :nth-child(12) {grid-area: tarj_dob; align-content: center;}
-.tiny_snippet_form .tab-content :nth-child(13) {grid-area: doc_simp; align-content: center;}
-.tiny_snippet_form .tab-content :nth-child(14) {grid-area: doc_doble; align-content: center;}
-.tiny_snippet_form .tab-content :nth-child(15) {grid-area: doc_triple; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(9) {grid-area: subt_rojo; align-content: center;} 
+.tiny_snippet_form .tab-content :nth-child(10) {grid-area: subt_azul; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(11) {grid-area: tarj_azul; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(12) {grid-area: tarj_roja; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(13) {grid-area: tarj_dob; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(14) {grid-area: doc_simp; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(15) {grid-area: doc_doble; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(16) {grid-area: doc_triple; align-content: center;}
 
 .tiny_snippet_widget_buttons .btn.btn-info:hover {
     background-color: #004b92;
@@ -1918,6 +1919,37 @@ margin-bottom: 0.5rem !important;
 }
 
 /*--pestañas--*/
+
+/*altura de pestañas*/
+
+#tabs-tree-start .nav-tabs a.nav-link {
+    height: 100% !important;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+}
+
+@media(max-width: 500px) {
+  #tabs-tree-start .nav-tabs a.nav-link {
+     max-width: 100% !important;
+}
+}
+
+/*Tamaño de pestañas en tablets*/
+
+@media(max-width: 700px) {
+.format-onetopic .verticaltabs>.tabs-wrapper {
+    max-width: 130px !important;
+}
+}
+
+/*anteriormente calc(100% - 250px)*/
+
+@media(max-width: 700px) {
+.format-onetopic .verticaltabs .onetopic-tab-body {
+    width: 100%;
+}
+}
 
 #tabs-tree-start .onetopic-tab-body .nav-tabs .nav-item.subtopic a.nav-link {
 height: 100%;
@@ -3990,4 +4022,75 @@ margin: 0 !important;
 
 .initialsdropdownform .dropdown-item-active {
     background: #004b92 !important;
+}
+
+/*estilos para formularios*/
+
+@media(min-width: 1000px) {
+#tiny_snippet_widgets_optionspanel .tab-content div:nth-child(1) {grid-area: form1;}
+#tiny_snippet_widgets_optionspanel .tab-content div:nth-child(2) {grid-area: form2;}
+#tiny_snippet_widgets_optionspanel .tab-content div:nth-child(3) {grid-area: form3;}
+#tiny_snippet_widgets_optionspanel .tab-content div:nth-child(4) {grid-area: form4;}
+#tiny_snippet_widgets_optionspanel .tab-content div:nth-child(5) {grid-area: form5;}
+#tiny_snippet_widgets_optionspanel .tab-content div:nth-child(6) {grid-area: form6;}
+#tiny_snippet_widgets_optionspanel .tab-content div:nth-child(7) {grid-area: form7;}
+#tiny_snippet_widgets_optionspanel .tab-content div:nth-child(8) {grid-area: form8;}
+#tiny_snippet_widgets_optionspanel .tab-content div:nth-child(9) {grid-area: form9;} 
+#tiny_snippet_widgets_optionspanel .tab-content div:nth-child(10) {grid-area: form10;}
+#tiny_snippet_widgets_optionspanel .tab-content div:nth-child(11) {grid-area: form11;}
+#tiny_snippet_widgets_optionspanel .tab-content div:nth-child(12) {grid-area: form12;}
+}
+
+@media(min-width: 1200px) {
+#tiny_snippet_widgets_optionspanel .tab-content{
+    display: grid !important;
+    grid-template-areas: "form1 form5 form9"
+                                             "form2 form6 form10"
+                                             "form3 form7 form11"
+                                             "form4 form8 form12" !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 8px !important;
+}
+}
+
+@media(max-width: 1200px) {
+  #tiny_snippet_widgets_optionspanel .tab-content{
+      display: grid !important;
+      grid-template-areas: "form1 form5"
+                                               "form2 form6"
+                                               "form3 form7"
+                                               "form4 form8" 
+                                               "form9 ."
+                                               "form10 ." 
+                                               "form11 ."
+                                               "form12 ." !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 8px !important;
+  }
+}
+
+@media(max-width: 1000px) {
+  #tiny_snippet_widgets_optionspanel .tab-content{
+      display: flex !important;
+  }
+}
+
+#tiny_snippet_widgets_optionspanel .tiny_snippet_form {
+    margin: 0 !important;
+}
+
+.tiny_snippet_widgetoptionsbuttons_cont {
+    position: sticky;
+    left: 0;
+    width: fit-content;
+}
+
+.tiny_snippet_widgetoptionsbuttons_cont .tiny_snippet_widgetcancelledbutton {
+    transition: 0s !important;
+}
+
+#tiny_snippet_widgets_optionspanel .mdl-align {
+    position: sticky !important;
+    width: fit-content;
+    left: 0;
 }
