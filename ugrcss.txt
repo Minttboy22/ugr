@@ -536,6 +536,10 @@ transition: 0.2s ease-in;
 border-radius: 8px;
 }
 
+.tile-clickable .photo-tile-text h3 {
+    font-size: 1rem !important;
+}
+
 #page .covtiles.panel .cimbox, #page .covtiles.panel:hover .cimbox, #page .covtiles.panel:hover {
 transform: scale(1.02);
 }
@@ -3058,7 +3062,7 @@ border-radius: 10px 10px 0px 10px;
 }
 
 .local-accessibility-buttoncontainer {
-z-index: 10050;
+z-index: 1000;
 }
 
 .form-range::-webkit-slider-runnable-track {
@@ -4258,6 +4262,10 @@ border: solid 2px #111;
 
 /*estilos para cuestionarios*/
 
+.tertiary-navigation .d-flex .navitem .btn-secondary {
+    background: #005eb8 !important;
+}
+
 .mod-quiz-edit-content .action-menu .dropdown-toggle {
   color: white;
   background: #005eb8;
@@ -4451,4 +4459,282 @@ display: flex;
 
 .que.ordering .sortablelist.active {
   border: 0 !important;
+}
+
+.questionbankwindow .d-flex  button:nth-child(2) {
+    background: #ccc !important;
+    font-size: 0.8rem !important;
+    padding: 2px 8px 2px !important;
+    height: 1.6rem;
+    align-self: center;
+}
+
+.questionbankwindow .d-flex  button:nth-child(2):hover {
+    background: #aaa !important;
+}
+
+.questionbankwindow .d-flex  button:nth-child(3) {
+    background: #ef3340 !important;
+    font-size: 0.8rem !important;
+    padding: 2px 8px 2px;
+    height: 1.6rem;
+    align-self: center;
+}
+
+.questionbankwindow .d-flex  button:nth-child(3):hover {
+    background: #9b0f19 !important;
+}
+
+.questionbankwindow .d-flex  button:nth-child(4) {
+    background: #005eb8 !important;
+    transition: 0s !important;
+}
+
+.questionbankwindow .d-flex  button:nth-child(4):hover {
+    background: #004b92 !important;
+    transition: 0s !important;
+}
+
+.questionbankwindow #switch-question-bank {
+    background: #005eb8 !important;
+    font-size: 1rem !important;
+    padding: 0px 12px !important;
+}
+
+.questionbankwindow #switch-question-bank:hover {
+    background: #004b92 !important;
+}
+
+/*cronograma asistencia docente*/
+
+.asist_doc_tabla {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  align-items: center;
+}
+
+.asist_doc_tabla table {
+  margin: 1rem 1rem 2rem;
+  text-align: center;
+}
+
+.asist_doc_tabla thead {
+  background-color: #005eb8;
+  color: white;
+}
+
+.asist_doc_tabla tbody tr:nth-child(odd) {
+  background-color: #005eb825;
+  border: solid 2px white;
+}
+
+.asist_doc_tabla tbody tr:nth-child(even) {
+  background-color: #005eb850;
+  border: solid 2px white;
+}
+
+.asist_doc_tabla th:hover {
+  background-color: #004b92;
+}
+
+.asist_doc_tabla td:hover {
+  background-color: #004b9235;
+}
+
+.asist_doc_tabla th, .asist_doc_tabla td {
+  padding: 8px;
+}
+
+.asist_doc_tabla h1, .asist_doc_tabla h2, .asist_doc_tabla h3, .asist_doc_tabla p {
+  margin-bottom: 0.5rem;
+}
+
+.asist_doc_tabla h1 {
+  margin-top: 2rem !important;
+}
+
+.asist_doc_tabla h2 {
+  font-size: 1.4rem;
+}
+
+.asist_doc_tabla h3 {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+
+.asist_doc_tabla p {
+  text-align: center;
+  margin-bottom: 1rem !important;
+}
+
+.asist_doc_tabla a {
+  color: #005eb8;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.asist_doc_tabla a:hover {
+  color: #004b92;
+  border-bottom: solid 1px #004b92;
+}
+
+.asist_zoom {
+  margin-bottom: 3rem !important;
+  margin-top: 0rem !important;
+}
+
+h2 a {
+  font-size: 1.5rem !important;
+}
+
+.link_zoom {
+  margin-top: 2rem !important;
+}
+
+.whatsapp_zoom {
+  margin-top: 0.5rem !important;
+}
+
+/*border radius para las tablas*/
+
+.asist_doc_tabla th:first-child{
+    border-top-left-radius: 8px;
+}
+
+.asist_doc_tabla th:nth-last-child(1){
+    border-top-right-radius: 8px;
+}
+
+.asist_doc_tabla tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+}
+
+.asist_doc_tabla tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+}
+
+/*calificar usuarios*/
+
+.grader-grading_navigation .container-fluid .d-none h5 {
+    color: white !important;
+    font-weight: 400 !important;
+    font-size: 1rem;
+    padding: 16px;
+}
+
+.text-muted {
+    margin: 0 0.5rem;
+}
+
+.path-mod-forum .unified-grader .grader-module-content-display .discussion-container .posts-container .parent-container .show-content-button {
+    position: absolute;
+    height: 35%;
+    left: 65px;
+    top: 28px;
+    text-align: left;
+    z-index: 1;
+    width: 11.2rem;
+    padding: 6px 0 8px 16px;
+}
+
+.path-mod-forum .unified-grader .grader-module-content-display .discussion-container .posts-container .parent-container .show-content-button.collapsed+.content {
+    opacity: 100%;
+}
+
+.grader-grading_navigation .container-fluid .ms-1 button:hover {
+    background: white !important;
+    transform: scale(1.2) !important;
+}
+
+.grader-grading_navigation .container-fluid .ms-1 button:focus {
+   background: white !important;
+}
+
+.grader-grading_navigation .container-fluid .ms-1 .ms-sm-2 {
+    transition: 0s !important;
+    font-weight: 400 !important;
+}
+
+.grader-grading_navigation .container-fluid .ms-1 .ms-sm-2:hover {
+    background: #004b92 !important;
+    transform: scale(1) !important;
+}
+
+.grader-grading_navigation .container-fluid .ms-1 .btn-secondary {
+    background: #ef3340 !important;
+    font-weight: 400 !important;
+
+}
+
+.grader-grading_navigation .container-fluid .ms-1 .btn-secondary:hover {
+    background: #9b0f19 !important;
+    transform: scale(1) !important;
+}
+
+.grader-grading_navigation .container-fluid .ms-1 .btn-group:hover span {
+    transform: scale(1) !important;
+    background: white !important; 
+    color: black !important;
+}
+
+.path-mod-forum .unified-grader .grader-grading-panel .user-picker-container .page-link {
+    border-radius: 20px;
+    margin: 0 0.5rem;
+    transition: 0s;
+}
+
+.grader-grading_navigation .container-fluid .ms-1 .drawer-button.d-sm-inline-block span img {
+    position: relative;
+    right: 5px;
+}
+
+.grader-grading-panel .overflow-auto .d-flex button {
+    background: white !important;
+    border-radius: 40px;
+    padding: 8px !important;
+}
+
+.grader-grading-panel .overflow-auto .d-flex button:hover {
+    background: #005eb850 !important;
+    text-decoration: 0 !important;
+}
+
+.path-mod-forum .unified-grader .grader-grading-panel .header-container .user-search-container .search-input-container .toggle-search-button {
+    padding-left: 0 !important;
+}
+
+.path-mod-forum .unified-grader .grader-grading-panel .header-container .user-search-container.collapsed .search-input-container .toggle-search-button .collapsed-icon {
+    position: absolute;
+    right: 8px;
+}
+
+/*seleccionar usuarios*/
+
+.moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd h1 {
+    color: white;
+    padding: 8px 0 0px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500 !important;
+}
+
+.usp-search form .usp-search-field {
+    border-radius: 8px 0 0 8px;
+    margin: 0.7rem 0 1.2rem;
+}
+
+.usp-search form .usp-search-btn {
+    border-radius: 0px 8px 8px 0px;
+    transition: 0 !important;
+}
+
+.usp-content .usp-finish input[type="submit"] {
+    border-radius: 16px;
+}
+
+/*esto arregla un error de borde azul en las etiquetas, no sé por qué sucede*/
+.format-tiles .course-content li.activity.label h3 {
+    border-left-style: none;
 }
