@@ -3,6 +3,14 @@
 background: #005eb8;
 }
 
+
+.h5p-youtube div[style*="padding: 56.25%"],
+.h5p-youtube div[style*="padding"] {
+    padding: 0 !important;
+}
+
+
+}
 .tiny_snippet_widget_buttons:is(:nth-child(4), :nth-child(7), :nth-child(8), :nth-child(11), :nth-child(12), :nth-child(13)) .btn-info {
   background: #003D75;
 }
@@ -28,7 +36,7 @@ background: #005eb8;
                          "tit_rojo tarj_roja doc_simp"
                          "tit_azul tarj_azul doc_doble"
                          "subt_rojo tarj_dob doc_triple"
-                         "subt_azul linea ."
+                         "subt_azul linea tabla_pod"
                          "etiq_roja cit_autor ."
                          "etiq_azul text_int ."; !important;
     grid-template-columns: 1fr 1fr 1fr !important;
@@ -52,7 +60,8 @@ background: #005eb8;
                          "text_int"
                          "doc_simp"
                          "doc_doble"
-                         "doc_triple" !important;
+                         "doc_triple" 
+                         "tabla_pod" !important;
     grid-template-columns: 1fr  !important;
     grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px  !important;
     }
@@ -81,6 +90,8 @@ background: #005eb8;
 .tiny_snippet_form .tab-content :nth-child(14) {grid-area: doc_simp; align-content: center;}
 .tiny_snippet_form .tab-content :nth-child(15) {grid-area: doc_doble; align-content: center;}
 .tiny_snippet_form .tab-content :nth-child(16) {grid-area: doc_triple; align-content: center;}
+.tiny_snippet_form .tab-content :nth-child(17) {grid-area: tabla_pod; align-content: center;}
+
 
 .tiny_snippet_widget_buttons .btn.btn-info:hover {
     background-color: #004b92;
@@ -995,8 +1006,18 @@ border: 2px solid #bbbbbb !important;
     transition: 0s !important;
 }
 
+.content .subcategories .courses .paging a:hover {
+    color: white !important;
+    background: #005eb8 !important;
+}
+
+.paging btn:hover {
+    color: white !important;
+    background: #005eb8 !important;
+}
+
 .generaltable .lastrow .cell .btn {
-    padding: 4px !important;
+    padding: 4px 12px !important;
 }
 
 #mod-zoom-meeting-rooms-list .mb-2 {
@@ -3541,7 +3562,7 @@ grid-template-columns: repeat(1, 1fr) !important;
 
 .container_sem {
     box-sizing: border-box;
-    max-width: 800px;
+    width: 100%;
 }
 
 .cronograma_sem {
@@ -3590,7 +3611,8 @@ grid-template-columns: repeat(1, 1fr) !important;
 
 .container_sem2 {
     box-sizing: border-box;
-    max-width: 800px;
+    /*max-width: 800px;*/
+    width: 100%;
 }
 
 .cronograma_sem2 {
@@ -4737,4 +4759,90 @@ h2 a {
 /*esto arregla un error de borde azul en las etiquetas, no sé por qué sucede*/
 .format-tiles .course-content li.activity.label h3 {
     border-left-style: none;
+}
+
+/*tabla de podología*/
+
+.glosario_tabla {
+  border-collapse: collapse;
+}
+
+.glosario_tabla, .glosario_tabla td, .glosario_tabla th {
+  border: solid 1px #ccc !important;
+}
+
+.glosario_tabla thead {
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.glosario_tabla td {
+  width: fit-content;
+  padding: 4px;
+}
+
+.glosario_tabla thead td:nth-child(n+2) {
+  width: 40px;
+  text-align: center;
+}
+
+.glosario_tabla tbody td:nth-child(n+2) {
+  text-align: center;
+}
+
+.glosario_tabla tbody tr:nth-child(1), 
+.glosario_tabla tbody tr:nth-child(7), 
+.glosario_tabla tbody tr:nth-child(11), 
+.glosario_tabla tbody tr:nth-child(14){
+  font-weight: 700;
+}
+
+/*.glosario_datos {
+  font-weight: 700;
+}*/
+
+.glosario_tabla tbody td:nth-child(1) {
+  vertical-align: middle;
+}
+
+/*consultas sql*/
+
+.csql_category a, .csql_category h2 {
+   font-size: 20px !important;
+}
+
+.csql_category {
+  margin-bottom: 12px;
+}
+
+.csql_category .afaicon {
+  font-size: 16px;
+}
+
+.h5p-interactive-book-content .h5p-interactive-book-chapter .h5p-column-content div {
+  width: 0 !important;
+}
+
+/*scroll de la barra de usuarios*/
+
+#participantsform .table-responsive {
+  overflow-x: visible !important;
+}
+
+/*recurso de asistencia*/
+
+.attfiltercontrols .row .addsession.p-2 {
+  margin-top: 1.6rem;
+}
+
+.attfiltercontrols .row .curdatecontrols {
+  margin-top: 1.3rem;
+}
+
+.lastrow .c5 a.btn-link {
+  margin-top: 4px;
+}
+
+select.form-control[size], select.form-control[multiple] {
+  padding-right: 0.8rem;
 }
