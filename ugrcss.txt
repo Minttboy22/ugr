@@ -1,8 +1,11 @@
+.btn {
+  padding: 6px 12px 6px;
+}
+
 /* --- ETIQUETAS SNIPPET --- */
 .tiny_snippet_widget_buttons .btn.btn-info {
 background: #005eb8;
 }
-
 
 .h5p-youtube div[style*="padding: 56.25%"],
 .h5p-youtube div[style*="padding"] {
@@ -1094,7 +1097,9 @@ margin-right: 4px;
 }
 
 a.btn-secondary {
-background-color: #666;
+  background-color: #666;
+  height: fit-content;
+  margin-top: 2px !important;
 }
 
 .editing #editingbutton .btn, .editing #editingbutton input[type="submit"], .editing #editingbutton a:hover, .purgecaches a, .tool_dataprivacy a {
@@ -1157,24 +1162,30 @@ font-size: 1rem;
 
 /* --- ESTILO DE BLOQUES Y MENÚ --- */
 
-.type_siteadmin a:active {
-color: #002d59 !important;
+.block-region .tree_item:hover,
+.block-region .tree_item:focus,
+.block-region .tree_item:focus-visible,
+.block-region .tree_item:focus-within {
+  padding: 0px 2px;
+  width: fit-content;
+  background: #005eb825;
+  border-radius: 8px;
+  color: #004b92 !important;
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-.type_siteadmin a:hover {
-color: #002d59 !important;
-}
-
-.type_siteadmin span:hover {
-color: #002d59 !important;
-}
-
-.type_setting a:hover {
-color: #002d59 !important;
-}
-
-.type_setting span:hover {
-color: #002d59 !important;
+.block-region .tree_item,
+.block-region .tree_item:focus,
+.block-region .tree_item:focus-visible,
+.block-region .tree_item *:focus,
+.block-region .tree_item *:focus-visible,
+.block-region .type_setting:focus,
+.block-region .type_setting *:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
 }
 
 .block > .content {
@@ -1218,6 +1229,10 @@ justify-content: flex-end!important;
 /* --- ESTILO DEL CHAT --- */
 [data-region=right-hand-drawer].drawer{
 box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.20), 0px 2px 1px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+}
+
+.pb-sm-3 {
+  padding: 8px 20px !important;
 }
 
 .drawer-top {
@@ -1828,6 +1843,10 @@ align-items: center;
 margin: 0;
 padding: 6px 7px;
 line-height: 130%;
+}
+
+.breadcrumb li span a {
+  margin-top: -4px !important;
 }
 
 .separator {
@@ -3063,6 +3082,7 @@ padding: 6px 10px !important;
 #local-accessibility-buttoncontainer button {
     background: #005eb8 !important;
     transition: 0s !important;
+    padding: 0 !important;
 }
 
 #local-accessibility-buttoncontainer button:hover {
@@ -4026,6 +4046,10 @@ margin: 0 !important;
     margin: 0.5rem !important;
 }
 
+.dropdown-menu.show {
+  border-radius: 12px;
+}
+
 .container-fluid .initials-selector .dropdown-menu.show {
     width: fit-content;
     border-radius: 8px;
@@ -4286,6 +4310,10 @@ border: solid 2px #111;
 
 .tertiary-navigation .d-flex .navitem .btn-secondary {
     background: #005eb8 !important;
+}
+
+.tertiary-navigation .d-flex .navitem .btn-secondary:hover {
+  background: #004b92 !important;
 }
 
 .mod-quiz-edit-content .action-menu .dropdown-toggle {
@@ -4845,4 +4873,225 @@ h2 a {
 
 select.form-control[size], select.form-control[multiple] {
   padding-right: 0.8rem;
+}
+
+/*arregla las imágenes en recursos h5p*/
+
+#page-h5p-embed {
+  width: 900px;
+  justify-self: center;
+}
+
+/*estilos para banners*/
+
+.bannerAT {
+  width: 100%;
+  height: fit-content;
+  background-image: linear-gradient(170deg,#683f90 50%, #23073f);
+  padding: 14px 24px !important;
+  border-radius: 12px;
+}
+
+.bannerAT h1 {
+  margin-top: 0px !important;
+  font-size: 30px;
+  color: white !important;
+}
+
+.bannerAT h2 {
+  font-size: 20px;
+  color: white !important;
+  font-weight: 400 !imporant;
+}
+
+.bannerAT h3 {
+  color: white !important;
+  font-size: 16px;
+  font-weight: 100 !important ; 
+}
+
+.bannerAT p {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+  font-size: 18px;
+  background: white;
+  padding: 4px 8px; 
+  width: fit-content;
+  border-radius: 16px;
+}
+
+.bannerAT p:hover {
+  background: #C2A8E6;
+}
+
+.bannerAT a {
+  color: #683f90 !important;
+}
+
+input[type="submit"] {
+  transition: 0s;
+}
+
+/*estilo de foros*/
+
+.discussion-list .topic .d-flex {
+  padding-left: 12px;
+}
+
+#region-main .btn-primary {
+  padding: 0.5rem 1rem;
+  transition: 0s;
+}
+
+#region-main .btn-primary:hover {
+  background: #004b92;
+}
+
+.forumpost .post-actions .btn-link, a.btn-link {
+  margin-left: 8px;
+}
+
+.singleselect {
+  margin: 0px 0 4px;
+}
+
+.form-select.singleselect {
+  margin: 8px 0 4px;
+}
+
+.forumpost .header {
+    background-color: transparent !important;
+    width: fit-content;
+    padding: 8px 8px 2px;
+    color: #005eb8;
+}
+
+.forumpost .header h3 {
+  color: #004b92;
+}
+
+.forumpost .header a {
+  color: #004b92 !important;
+}
+
+.forumpost .header a {
+  border-bottom: solid 1px #005eb8;
+}
+
+.forumpost {
+    background-color: #005eb825;
+    border-radius: 8px;
+    border: solid 4px #005eb8 !important;
+}
+
+.forumpost .header .d-flex.flex-column {
+  position: relative;
+  top: 5px;
+}
+
+/*transición de botones*/
+
+button, .btn-primary, a.btn-primary, a.btn-primary:visited, .backup-restore .singlebutton button[type="submit"], .path-mod-workshop .assessment-summary.graded .singlebutton input[type="submit"], .path-mod-workshop .example-summary.graded .singlebutton input[type="submit"], .btn-default, [data-role="next"], [data-role="previous"], input[type="submit"], input[type="button"], #searchform_button, a.submit, #notice .singlebutton+.singlebutton input, input.form-reset, input.form-submit, input#id_submitbutton, input#id_submitbutton2, .path-admin .buttons input[type="submit"], .nav-pills>.active>a, td.submit input, div.discussionsubscription>a.discussiontoggle, .btn-outline-secondary, .btn-outline-secondary:visited, .paging-morelink a, a#adaptable-message-user-button, #availability_addrestriction_date.btn.btn-secondary, #availability_addrestriction_grade.btn.btn-secondary, #availability_addrestriction_profile.btn.btn-secondary, #availability_addrestriction_list_.btn.btn-secondary, #availability_addrestriction_completion.btn.btn-secondary {
+   transition: 0s !important;
+}
+
+/*estilo para hojas de excel incrustradas desde one drive*/
+
+.ewa-embed-footer, 
+.ewa-stb-uir {
+  display: none !important;
+}
+
+.ewa-embed-root-cont .ewr-all-native-scroll.ewr-grdcontarea-grid {
+  overflow: hidden !important;
+}
+
+/*botón de recurso libros*/
+
+.path-mod-book #page,
+.path-mod-book #page-content,
+.path-mod-book #region-main,
+.path-mod-book #mod_book-chaptersnavigation {
+  transform: none !important;
+  perspective: none !important;
+  contain: none !important;
+}
+
+.path-mod-book #mod_book-chaptersnavigation {
+  margin: -25px -35px 0px;
+  position: relative;
+  top: 0px;
+}
+
+.path-mod-book .btn-previous,
+.path-mod-book .btn-next {
+  position: fixed;
+  z-index: 10000;
+  bottom: 30px;
+  background: #005eb8;
+}
+
+@media (width > 1201px) {
+  .path-mod-book .btn-previous,
+  .path-mod-book .btn-next {
+    border-radius: 16px !important;
+    padding: 1rem 2rem;
+    position: fixed;
+    bottom: 30px;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 10000;
+  }
+  .path-mod-book .btn-previous {
+    left: 30px;
+  }
+  .path-mod-book .btn-next {
+    left: 130px;
+  }
+}
+
+@media (width < 1200px) {
+  .path-mod-book .btn-previous,
+  .path-mod-book .btn-next {
+    border-radius: 16px !important;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+    bottom: 30px;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 10000;
+  }
+  .path-mod-book .btn-previous {
+    left: 30px;
+  }
+  .path-mod-book .btn-next {
+    left: 130px;
+  }
+}
+
+@media (width < 600px) {
+  .path-mod-book .btn-previous,
+  .path-mod-book .btn-next {
+    border-radius: 0 !important;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 50% !important;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 100000 !important;
+}
+   .path-mod-book .btn-previous {
+    left: 0 !important;
+}
+   .path-mod-book .btn-next {
+    right: 0 !important;
+    left: auto !important;
+}
+}
+
+.video_frame_container {
+  z-index: 1;
 }
